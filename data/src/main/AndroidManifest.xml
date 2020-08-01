@@ -1,0 +1,11 @@
+<!--
+  ~ Created by Amwalul Ikhsani on 7/29/20 4:53 PM
+  ~ Copyright (c) 2020. All rights reserved.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amwa.data">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

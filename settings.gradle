@@ -1,0 +1,9 @@
+/*
+ * Created by Amwalul Ikhsani on 7/29/20 4:53 PM
+ * Copyright (c) 2020. All rights reserved.
+ */
+
+include ':domain'
+include ':app'
+include ':data'
+rootProject.name='IG Downloader'

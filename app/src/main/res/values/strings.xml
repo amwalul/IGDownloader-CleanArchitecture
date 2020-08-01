@@ -1,0 +1,35 @@
+<!--
+  ~ Created by Amwalul Ikhsani on 7/29/20 5:27 PM
+  ~ Copyright (c) 2020. All rights reserved.
+  -->
+
+<resources>
+
+    <!-- Change App Name here -->
+    <string name="app_name">IG Downloader</string>
+
+    <!-- Error messages -->
+    <string name="generic_error">Unexpected error occurred</string>
+    <string name="link_not_found_error">Link not found or page is private</string>
+    <string name="rto_error">Request timed out</string>
+    <string name="network_error">Network error. Please check your internet connection</string>
+    <string name="no_internet_error">No internet connection</string>
+    <string name="save_media_error">Failed to save media</string>
+    <string name="internal_error">An internal error has occurred</string>
+    <string name="invalid_url_error">Please copy and paste the correct link first</string>
+    <string name="need_permission_error">This app requires a storage permission to store media</string>
+
+    <!-- Main Activity -->
+    <string name="downloader">Downloader</string>
+    <string name="gallery">Gallery</string>
+
+    <!-- Base Fragment -->
+    <string name="message">Message</string>
+    <string name="ok">OK</string>
+
+    <!-- Downloader Fragment -->
+    <string name="media_saved">Media saved</string>
+    <string name="download">Download</string>
+    <string name="input_url">Input the URL here</string>
+
+</resources>
