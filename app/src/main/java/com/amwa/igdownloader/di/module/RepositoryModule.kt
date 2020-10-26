@@ -9,6 +9,10 @@ import com.amwa.data.common.utils.Connectivity
 import com.amwa.data.common.utils.ConnectivityImpl
 import com.amwa.data.repository.MediaRepositoryImpl
 import com.amwa.data.repository.PostRepositoryImpl
+import com.amwa.data.repository.fetch.LocalFetch
+import com.amwa.data.repository.fetch.RemoteFetch
+import com.amwa.data.repository.fetch.impl.LocalFetchImpl
+import com.amwa.data.repository.fetch.impl.RemoteFetchImpl
 import com.amwa.domain.repository.MediaRepository
 import com.amwa.domain.repository.PostRepository
 import dagger.Binds
@@ -38,4 +42,16 @@ abstract class RepositoryModule {
     abstract fun provideMediaRepository(
         mediaRepositoryImpl: MediaRepositoryImpl
     ): MediaRepository
+
+    @Binds
+    @Singleton
+    abstract fun provideLocalFetch(
+        localFetchImpl: LocalFetchImpl
+    ): LocalFetch
+
+    @Binds
+    @Singleton
+    abstract fun provideRemoteFetch(
+        remoteFetchImpl: RemoteFetchImpl
+    ): RemoteFetch
 }

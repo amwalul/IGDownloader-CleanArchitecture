@@ -5,19 +5,19 @@
 
 package com.amwa.data.repository
 
-import com.amwa.data.common.utils.Connectivity
 import com.amwa.data.datasource.post.PostRemoteDataSource
+import com.amwa.data.repository.fetch.RemoteFetch
 import com.amwa.domain.model.Post
 import com.amwa.domain.model.ResultWrapper
 import com.amwa.domain.repository.PostRepository
 import javax.inject.Inject
 
 class PostRepositoryImpl @Inject constructor(
-    connectivity: Connectivity,
-    private val postRemoteDataSource: PostRemoteDataSource
-) : BaseRepository(connectivity), PostRepository {
+    private val postRemoteDataSource: PostRemoteDataSource,
+    private val remoteFetch: RemoteFetch
+) : PostRepository {
 
     override suspend fun getPost(shortcode: String): ResultWrapper<Post> {
-        return fetchData { postRemoteDataSource.getPost(shortcode) }
+        return remoteFetch.fetchData { postRemoteDataSource.getPost(shortcode) }
     }
 }
